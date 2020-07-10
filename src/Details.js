@@ -9,13 +9,6 @@ import ThemeContext from "./ThemeContext";
 class Details extends React.Component {
   state = { loading: true, showModal: false };
 
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     loading: true,
-  //   };
-  // }
   componentDidMount() {
     Pet.animal(this.props.id).then(({ animal }) => {
       this.setState({
