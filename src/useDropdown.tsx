@@ -1,4 +1,4 @@
-import React, { useState, FunctionComponent } from "react";
+import React, { useState, FunctionComponent, Dispatch } from "react";
 
 const useDropdown = (
   label: string,
@@ -27,7 +27,11 @@ const useDropdown = (
     </label>
   );
 
-  return [state, Dropdown, updateState];
+  return [state, Dropdown, updateState] as [
+    string,
+    FunctionComponent,
+    Dispatch<string>
+  ];
 };
 
 export default useDropdown;

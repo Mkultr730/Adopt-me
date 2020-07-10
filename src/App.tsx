@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import "regenerator-runtime/runtime";
 import { Router, Link } from "@reach/router";
 import SearchParams from "./SearchParams";
@@ -25,4 +26,4 @@ const App = () => {
   );
 };
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
